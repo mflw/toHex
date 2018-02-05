@@ -1,0 +1,1 @@
+java -jar "target\toHex-0.5-SNAPSHOT.jar"
