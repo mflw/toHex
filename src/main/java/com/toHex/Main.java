@@ -13,7 +13,7 @@ public class Main {
   	System.out.println("toHex!");
   	while(true) {
   		k++;
-  		System.out.println("Input source:");
+  		System.out.println("Input path to file (without spaces) or drag&drop:");
   		input = scanner.next();
   		if (input.equals("exit")) System.exit(0);
     	FileInputStream fin = new FileInputStream(input);
@@ -21,20 +21,19 @@ public class Main {
 
     	int len;
     	byte data[] = new byte[16];
-
+      System.out.println("--Reading..");
     	// Read bytes until EOF is encountered.
     	do {
       	len = fin.read(data);
-      	for (int j = 0; j < len/2; j++) {
+      	for (int j = 0; j < len; j++) {
       		String str = "\\x"+String.format("%02x", data[j]);
-
       		outputStream.write(str.getBytes());
-
-      		//System.out.print("\\x");
-        	System.out.print(str);
+        	//System.out.print(str);
         }
     	} while (len != -1);
     	System.out.println("\nCompleted.");
+      System.out.println("Saved to file: hexOut"+k+".txt");
+
   	}
   }
 
