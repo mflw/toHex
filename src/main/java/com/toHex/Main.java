@@ -32,6 +32,7 @@ public class Main {
         }
     	} while (len != -1);
     	System.out.println("\nCompleted.");
+      outputStream.close();
       System.out.println("Saved to file: hexOut"+k+".txt");
 
   	}
