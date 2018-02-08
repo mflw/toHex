@@ -6,4 +6,4 @@ Writes output data to file hexOut[index].txt
 
 start - run.bat
 
-type exit to exit.
+type exit to exit
